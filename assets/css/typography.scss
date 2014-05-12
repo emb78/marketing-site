@@ -1,0 +1,19 @@
+@mixin regular {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: normal;
+}
+
+@mixin bold {
+  font-family: Verdana, Geneva, sans-serif;
+  font-weight: bold;
+}
+
+@mixin typography1 {
+  @include bold;
+  font-size: 40px;
+}
+
+@mixin bodyFont {
+  @include regular;
+  font-size: 18px;
+}

@@ -1,6 +1,9 @@
 require 'sinatra/base'
+require 'sass'
+require_relative 'asset_handler'
 
 class Website < Sinatra::Base
+  use AssetHandler
 
   configure do
     def log message
@@ -9,7 +12,15 @@ class Website < Sinatra::Base
     end
   end
 
+
+  def css(*stylesheets)
+    stylesheets.map do |stylesheet|
+      "<link href=\"/#{stylesheet}.css\" media=\"screen, projection\" rel=\"stylesheet\" />"
+    end.join
+  end
+
   get '/' do
+    @css_files = :home
     erb :home
   end
 end
