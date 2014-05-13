@@ -29,4 +29,46 @@ body {
     background-color: white;
   }
 
+  section.introduction {
+    .container {
+      @include outer-container;
+
+      .left-side {
+        @include span-columns(6 of 12);
+        padding-right: 10px;
+      }
+
+      .right-side {
+        @include span-columns(6 of 12);
+        .eco-friendly {
+          width: 100%;
+        }
+      }
+
+      @include media($tablet) {
+        .left-side {
+          @include span-columns(12 of 12);
+          margin-bottom: 10px;
+        }
+
+        .right-side {
+          @include span-columns(12 of 12);
+        }
+      };
+
+      @include media($mobile) {
+        .left-side {
+          @include span-columns(1 of 1);
+          margin-bottom: 10px;
+        }
+
+        .right-side {
+          @include span-columns(1 of 1);
+        }
+      };
+
+    }
+
+  }
+
 }

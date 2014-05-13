@@ -1,2 +1,12 @@
 @import 'typography';
 @import 'colors';
+
+h1 {
+  @include typography1;
+  color: $accentColor1;
+}
+
+p {
+  @include bodyFont;
+  color: $copyColor;
+}

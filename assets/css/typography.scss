@@ -11,9 +11,11 @@
 @mixin typography1 {
   @include bold;
   font-size: 40px;
+  line-height: 48px;
 }
 
 @mixin bodyFont {
   @include regular;
   font-size: 18px;
+  line-height: 20px;
 }
