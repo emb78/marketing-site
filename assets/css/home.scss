@@ -110,4 +110,37 @@ body {
 
     }
   }
+
+  section.how-it-works {
+    .call-to-action {
+      padding: 40px 20px;
+      text-align: center;
+
+      p {
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+      }
+
+      .button {
+        display: block;
+        background-color: $tertiaryColor;
+        width: 200px;
+        margin: auto;
+        padding: 20px 0;
+
+        .button-text {
+          color: white;
+        }
+
+        &:hover {
+          background-color: $tertiary2;
+        }
+
+        @include media($mobile) {
+          width: 90%;
+          margin: 20px 5% 20px 5%;
+        };
+      }
+    }
+  }
 }

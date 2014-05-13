@@ -6,7 +6,20 @@ h1 {
   color: $primaryColor;
 }
 
+h2 {
+  @include typography2;
+  color: $primaryColor;
+}
+
 p {
   @include bodyFont;
   color: $copyColor;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  &:hover {
+    color: $hoverColor;
+  }
 }
