@@ -1,7 +1,7 @@
 @import "styles";
 
 header {
-  background: $accentColor1;
+  background: $primaryColor;
   padding: 20px 20px;
   a {
     color: $copyColor;
@@ -10,7 +10,7 @@ header {
 }
 
 footer {
-  background: $accentColor1;
+  background: $primaryColor;
   padding: 10px 20px;
   a {
     color: $copyColor;

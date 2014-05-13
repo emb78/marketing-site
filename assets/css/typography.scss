@@ -14,6 +14,18 @@
   line-height: 48px;
 }
 
+@mixin typography2 {
+  @include bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+@mixin typography3 {
+  @include regular;
+  font-size: 26px;
+  line-height: 30px;
+}
+
 @mixin bodyFont {
   @include regular;
   font-size: 18px;
