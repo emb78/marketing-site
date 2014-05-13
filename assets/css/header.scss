@@ -3,13 +3,34 @@
 header {
   background: $primaryColor;
   padding: 20px 20px;
-  a {
-    color: white;
-    text-decoration: none;
-    &.home-link {
+
+  .header-container {
+    @include outer-container;
+
+    .left-links {
+      @include span-columns(10 of 12);
+    }
+
+    .home-link {
+      color: white;
       @include typography2;
     }
+
+    .right-links {
+      @include span-columns(2 of 12);
+      line-height: 35px;
+    }
+
+    .link {
+      color: white;
+      @include span-columns(1 of 2);
+      @include shift(1);
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
   }
+
 }
 
 footer {

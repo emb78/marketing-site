@@ -1,3 +1,20 @@
+@import "bourbon/bourbon";
+@import "neat/neat-helpers";
+
+// Change the grid settings
+$column: 340px;
+$gutter: 0px;
+$max-width: em(1024);
+
+// Define your breakpoints
+$visual-grid: false;
+
+$browser: new-breakpoint(min-width 831px, 12);
+$tablet: new-breakpoint(min-width 551px max-width 830px, 12);
+$mobile: new-breakpoint(min-width 320px max-width 550px, 1);
+
+@import "neat/neat";
+
 @import 'typography';
 @import 'colors';
 
@@ -21,5 +38,17 @@ a {
   text-decoration: none;
   &:hover {
     color: $hoverColor;
+  }
+}
+
+body {
+  background-color: $backgroundColor;
+  color: $copyColor;
+  @include bodyFont;
+
+  .page-content {
+    max-width: 1440px;
+    margin: auto;
+    background-color: white;
   }
 }

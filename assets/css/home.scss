@@ -1,146 +1,119 @@
-@import "bourbon/bourbon";
-@import "neat/neat-helpers";
-
-// Change the grid settings
-$column: 340px;
-$gutter: 0px;
-$max-width: em(1024);
-
-// Define your breakpoints
-$visual-grid: false;
-
-$browser: new-breakpoint(min-width 831px, 12);
-$tablet: new-breakpoint(min-width 551px max-width 830px, 12);
-$mobile: new-breakpoint(min-width 320px max-width 550px, 1);
-
-@import "neat/neat";
 @import "styles";
 
-body {
-  background-color: $backgroundColor;
-  color: $copyColor;
-  @include bodyFont;
 
-  .page-content {
-    max-width: 1440px;
-    margin: auto;
-    background-color: white;
-  }
+section.introduction {
+  padding: 20px;
 
-  section.introduction {
-    padding: 20px;
+  .container {
+    @include outer-container;
 
-    .container {
-      @include outer-container;
+    .left-side {
+      @include span-columns(6 of 12);
+      padding-right: 10px;
+      p {
+        @include typography3;
+      }
+    }
 
+    .right-side {
+      @include span-columns(6 of 12);
+      .eco-friendly {
+        width: 100%;
+      }
+    }
+
+    @include media($tablet) {
       .left-side {
-        @include span-columns(6 of 12);
-        padding-right: 10px;
-        p {
-          @include typography3;
-        }
+        @include span-columns(12 of 12);
+        margin-bottom: 10px;
       }
 
       .right-side {
-        @include span-columns(6 of 12);
-        .eco-friendly {
-          width: 100%;
-        }
+        @include span-columns(12 of 12);
+      }
+    };
+
+    @include media($mobile) {
+      .left-side {
+        @include span-columns(1 of 1);
+        margin-bottom: 10px;
       }
 
-      @include media($tablet) {
-        .left-side {
-          @include span-columns(12 of 12);
-          margin-bottom: 10px;
-        }
+      .right-side {
+        @include span-columns(1 of 1);
+      }
+    };
 
-        .right-side {
-          @include span-columns(12 of 12);
-        }
+  }
+
+}
+
+section.benefits {
+  .container {
+    @include outer-container;
+    background-color: $secondaryColor;
+
+    .benefit {
+      img {
+        width: 100%;
+      }
+
+      p {
+        padding: 10px;
+        @include typography3;
+      }
+
+      @include media($browser) {
+        @include span-columns(4 of 12);
+        @include omega(3n);
+      };
+
+      @include media($tablet) {
+        @include span-columns(6 of 12);
+        @include omega(2n);
+        min-height: 200px;
       };
 
       @include media($mobile) {
-        .left-side {
-          @include span-columns(1 of 1);
-          margin-bottom: 10px;
-        }
-
-        .right-side {
-          @include span-columns(1 of 1);
+        @include span-columns(1 of 1);
+        p {
+          padding: 20px;
         }
       };
-
     }
 
   }
+}
 
-  section.benefits {
-    .container {
-      @include outer-container;
-      background-color: $secondaryColor;
+section.how-it-works {
+  .call-to-action {
+    padding: 40px 20px;
+    text-align: center;
 
-      .benefit {
-        img {
-          width: 100%;
-        }
-
-        p {
-          padding: 10px;
-          @include typography3;
-        }
-
-        @include media($browser) {
-          @include span-columns(4 of 12);
-          @include omega(3n);
-        };
-
-        @include media($tablet) {
-          @include span-columns(6 of 12);
-          @include omega(2n);
-          min-height: 200px;
-        };
-
-        @include media($mobile) {
-          @include span-columns(1 of 1);
-          p {
-            padding: 20px;
-          }
-        };
-      }
-
+    p {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
     }
-  }
 
-  section.how-it-works {
-    .call-to-action {
-      padding: 40px 20px;
-      text-align: center;
+    .button {
+      display: block;
+      background-color: $tertiaryColor;
+      width: 200px;
+      margin: auto;
+      padding: 20px 0;
 
-      p {
-        max-width: 600px;
-        margin: 0 auto 30px auto;
+      .button-text {
+        color: white;
       }
 
-      .button {
-        display: block;
-        background-color: $tertiaryColor;
-        width: 200px;
-        margin: auto;
-        padding: 20px 0;
-
-        .button-text {
-          color: white;
-        }
-
-        &:hover {
-          background-color: $tertiary2;
-        }
-
-        @include media($mobile) {
-          width: 90%;
-          margin: 20px 5% 20px 5%;
-        };
+      &:hover {
+        background-color: $tertiary2;
       }
+
+      @include media($mobile) {
+        width: 90%;
+        margin: 20px 5% 20px 5%;
+      };
     }
   }
 }

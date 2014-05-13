@@ -23,5 +23,10 @@ class Website < Sinatra::Base
     @css_files = :home
     erb :home
   end
+
+  get '/about' do
+    @css_files = :about
+    erb :about
+  end
 end
 
