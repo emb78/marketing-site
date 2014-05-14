@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sass'
 require_relative 'asset_handler'
+require 'pony'
 
 class Website < Sinatra::Base
   use AssetHandler
@@ -35,9 +36,22 @@ class Website < Sinatra::Base
   end
 
   post '/quote_request' do
+
+    request_info = ""
+    params.keys.each do |k|
+      request_info += "#{k} : #{params[k]}"
+    end
+
+    Pony.mail :to => 'admin@ecofirm.com',
+              :from => params[:email],
+              :subject => 'Gimme a quote!',
+              :body => request_info
+
+
     @css_files = :pricing
-    @message = "Thank you, we received your message!"
+    @message = "Thank you for requesting a quote!"
     erb :pricing
+
   end
 end
 
