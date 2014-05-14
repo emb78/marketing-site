@@ -33,5 +33,11 @@ class Website < Sinatra::Base
     @css_files = :pricing
     erb :pricing
   end
+
+  post '/quote_request' do
+    @css_files = :pricing
+    @message = "Thank you, we received your message!"
+    erb :pricing
+  end
 end
 

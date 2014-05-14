@@ -7,7 +7,7 @@
 
 
 
-  <form id="quote-request">
+  <form id="quote-request" action="quote_request" method="post">
     <fieldset>
 
       First name: <input type="text" name="first-name">
@@ -21,6 +21,11 @@
       <input type="radio" name="size" value="medium">21-50
       <input type="radio" name="size" value="large">51-200
       <input type="radio" name="size" value="extra-large">201+
+      <br/>
+      <br/>
+
+      Tell us a little bit about what you are looking for:
+      <textarea rows="5" maxlength="700" name="details"></textarea>
     </fieldset>
 
 

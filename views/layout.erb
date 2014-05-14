@@ -27,6 +27,13 @@
     </header>
 
     <div class="page-content">
+      <% if !@message.nil? && @message != "" %>
+          <div id="page-message">
+          <div class="text">
+            <%= @message %>
+          </div>
+          </div>
+      <% end %>
       <%= yield %>
     </div>
 

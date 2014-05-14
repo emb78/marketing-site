@@ -10,6 +10,11 @@ section.pricing {
 
   #quote-request {
     max-width: 500px;
+
+    textarea {
+      max-height: 375px;
+    }
+
   }
 
 }

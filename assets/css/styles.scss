@@ -53,3 +53,13 @@ body {
     background-color: white;
   }
 }
+
+#page-message {
+  padding: 20px 20px 0 20px;
+
+  .text {
+    padding: 5px;
+    border: 1px lightgray solid;
+    text-align: center;
+  }
+}
