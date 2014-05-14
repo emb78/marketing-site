@@ -28,5 +28,10 @@ class Website < Sinatra::Base
     @css_files = :about
     erb :about
   end
+
+  get '/pricing' do
+    @css_files = :pricing
+    erb :pricing
+  end
 end
 

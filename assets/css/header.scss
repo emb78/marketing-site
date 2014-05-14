@@ -26,15 +26,15 @@ header {
 
     @include media($browser) {
       .left-links {
-        @include span-columns(10 of 12);
+        @include span-columns(8 of 12);
       }
 
       .right-links {
-        @include span-columns(2 of 12);
+        @include span-columns(4 of 12);
       }
 
       .link {
-        @include span-columns(2 of 2);
+        @include span-columns(2 of 4);
         @include shift(0);
       }
     }
@@ -50,7 +50,7 @@ header {
       }
 
       .link {
-        @include span-columns(4 of 4);
+        @include span-columns(2 of 4);
       }
     }
 
@@ -78,8 +78,19 @@ header {
 footer {
   background: $primaryColor;
   padding: 10px 20px;
-  a {
-    color: $copyColor;
-    text-decoration: none;
+
+  .footer-container {
+    max-width: 1024px;
+    margin: auto;
+
+    .link {
+      margin-right: 10px;
+    }
+
+    a {
+      color: $copyColor;
+      text-decoration: none;
+    }
   }
+
 }
