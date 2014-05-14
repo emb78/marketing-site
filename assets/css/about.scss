@@ -1,9 +1,13 @@
 section.about {
   padding: 20px;
   min-height: 500px;
+  max-width: 1024px;
+  margin: auto;
+
   p {
     margin: 10px 0;
   }
+
   .sign-off {
     margin-left: 20px;
     font-style: italic;

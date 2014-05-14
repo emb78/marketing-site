@@ -1,6 +1,10 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bitters (0.9.3)
+      bourbon (>= 3.1)
+      sass (>= 3.2)
+      thor
     bourbon (4.0.1)
       sass (~> 3.3)
       thor
@@ -28,6 +32,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bitters
   bourbon
   neat
   sass

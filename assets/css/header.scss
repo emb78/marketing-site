@@ -2,10 +2,11 @@
 
 header {
   background: $primaryColor;
-  padding: 20px 20px;
 
   .header-container {
     @include outer-container;
+    max-width: $max-width;
+    padding: 20px 20px;
 
     .home-link {
       color: white;
@@ -77,10 +78,10 @@ header {
 
 footer {
   background: $primaryColor;
-  padding: 10px 20px;
 
   .footer-container {
     max-width: 1024px;
+    padding: 10px 20px;
     margin: auto;
 
     .link {
