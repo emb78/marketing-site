@@ -18,6 +18,7 @@ header {
 
     .link {
       color: white;
+      text-align: right;
       &:hover {
         color: $secondaryColor;
       }
@@ -33,10 +34,11 @@ header {
       }
 
       .link {
-        @include span-columns(1 of 2);
-        @include shift(1);
+        @include span-columns(2 of 2);
+        @include shift(0);
       }
     }
+
 
     @include media($tablet) {
       .left-links {
@@ -48,8 +50,7 @@ header {
       }
 
       .link {
-        @include span-columns(2 of 4);
-        @include shift(2);
+        @include span-columns(4 of 4);
       }
     }
 
@@ -65,6 +66,7 @@ header {
       .link {
         @include span-columns(1 of 1);
         @include shift(0);
+        text-align: left;
       }
     }
 
