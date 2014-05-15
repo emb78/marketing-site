@@ -43,8 +43,7 @@ class Website < Sinatra::Base
     end
 
     Pony.mail :to => 'admin@ecofirm.com',
-              :from => params[:email],
-              :subject => 'Gimme a quote!',
+              :subject => 'Incoming quote request',
               :body => request_info
 
 
